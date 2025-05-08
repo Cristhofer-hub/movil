@@ -1,11 +1,12 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Text>Hola Mundo</Text>
+      <Text>CALCULADORA IMC</Text>
       <Image style={styles.imagen} source={{uri:"https://istpetonline.edu.ec/pluginfile.php/1/theme_klassroom/featuredpostimage/1720643456/on-line.png"}}/>
+      <TextInput style={styles.TextInput} keyboardType='numeric' placeholder='Ingrese su peso(kg)'></TextInput>
+      <TextInput style={styles.TextInput} keyboardType='numeric' placeholder='Ingrese su altura(m)'></TextInput>
     </View>
   );
 }
@@ -20,5 +21,10 @@ const styles = StyleSheet.create({
   imagen: {
     width:250,
     height:150
+  },
+  TextInput: {
+    borderColor: "#000000",
+    borderRadius: 3,
+    borderWidth: 3
   }
 });
